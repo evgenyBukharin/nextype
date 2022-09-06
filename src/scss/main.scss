@@ -1,0 +1,10 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/hero";
+@import "./components/card";
+@import "./components/swiper-inner";

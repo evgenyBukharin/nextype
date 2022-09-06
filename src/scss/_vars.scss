@@ -1,0 +1,21 @@
+:root {
+	// base
+	--font-family: "Roboto", sans-serif;
+	--content-width: 1328px;
+	--container-offset: 15px;
+	--container-width: calc(
+		var(--content-width) + (var(--container-offset) * 2)
+	);
+
+	// colors
+	--white-color: #fff;
+	--black-color: #000;
+	--gray-color: #e1e1e6;
+	--blue-color: #2244cc;
+	--dark-blue-color: #353545;
+	--text-primary-color: #19191e;
+	--text-secondary-color: #323237;
+	--text-tetriary-color: #4a4a4f;
+	--slide-gradient-top: #e9eef4;
+	--slide-gradient-bottom: #f3f6f9;
+}
