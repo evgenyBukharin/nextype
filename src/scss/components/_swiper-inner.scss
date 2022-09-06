@@ -6,7 +6,6 @@
 	list-style: none;
 	padding: 0;
 	z-index: 1;
-
 	&__wrapper {
 		position: relative;
 		width: 100%;
@@ -24,6 +23,37 @@
 		transition-property: transform;
 	}
 	&__navigation {
-		display: flex;
+		display: none;
+	}
+	&__pagination {
+		display: none;
+	}
+	&__bullet {
+		width: 16px;
+		height: 4px;
+		background: var(--dark-blue-color);
+		transition: width 0.4s ease-in-out, background 0.4s ease-in-out;
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+		&-active {
+			width: 24px;
+			background: var(--blue-color);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.swiper-inner {
+		&__navigation {
+			display: flex;
+			top: 40%;
+		}
+		&__pagination {
+			margin-top: 32px;
+			margin-bottom: 40px;
+			display: flex;
+			justify-content: center;
+		}
 	}
 }

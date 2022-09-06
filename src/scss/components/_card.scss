@@ -151,6 +151,14 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.card {
+		&-bottom {
+			margin-top: 0;
+		}
+	}
+}
+
 @media (max-width: 520px) {
 	.card {
 		&__description {

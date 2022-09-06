@@ -66,15 +66,6 @@ const swiper = new Swiper(".swiper", {
 	slideClass: "swiper-slide",
 	slideActiveClass: "hero__slide-active",
 	slidesPerView: 1,
-	// breakpoints: {
-	// 1025: {},
-	// 769: {
-	// 	spaceBetween: 30,
-	// },
-	// 426: {
-	// 	spaceBetween: 0,
-	// },
-	// },
 	navigation: {
 		nextEl: ".hero__btn-next",
 		prevEl: ".hero__btn-prev",
@@ -117,15 +108,12 @@ const swiperInner = new Swiper(".swiper-inner", {
 		prevEl: ".swiper-inner__btn-prev",
 		disabledClass: "hero__btn-disabled",
 	},
-	// pagination: {
-	// 	el: ".swiper-pagination",
-	// 	bulletClass: "hero__bullet",
-	// 	bulletActiveClass: "hero__bullet-active",
-	// 	clickable: true,
-	// 	renderBullet: function (index, className) {
-	// 		return `<li class="${className}">${paginationElems[index]}</li>`;
-	// 	},
-	// },
+	pagination: {
+		el: ".swiper-inner__pagination",
+		bulletClass: "swiper-inner__bullet",
+		bulletActiveClass: "swiper-inner__bullet-active",
+		clickable: true,
+	},
 });
 
 // Подключение анимаций по скроллу
