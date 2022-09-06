@@ -112,6 +112,11 @@ const swiperInner = new Swiper(".swiper-inner", {
 			slidesPerView: 1,
 		},
 	},
+	navigation: {
+		nextEl: ".swiper-inner__btn-next",
+		prevEl: ".swiper-inner__btn-prev",
+		disabledClass: "hero__btn-disabled",
+	},
 	// pagination: {
 	// 	el: ".swiper-pagination",
 	// 	bulletClass: "hero__bullet",
