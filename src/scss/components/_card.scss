@@ -1,17 +1,17 @@
 .card {
-	border: 1px solid var(--gray-color);
 	position: relative;
 	padding-bottom: 150px;
 	overflow-y: hidden;
 	box-shadow: 0px 4px 32px rgba(255, 0, 0, 0);
 	transition: box-shadow 0.4s ease-in-out;
 	box-sizing: border-box;
+	border-bottom: 1px solid var(--gray-color);
 	&::after {
 		content: "";
 		position: absolute;
-		left: 0;
+		left: 1px;
 		bottom: 26px;
-		width: 100%;
+		width: calc(100% - 2px);
 		height: 40px;
 		background: linear-gradient(
 			to bottom,
@@ -22,9 +22,9 @@
 	&::before {
 		content: "";
 		position: absolute;
-		left: 0;
+		left: 1px;
 		bottom: 0;
-		width: 100%;
+		width: calc(100% - 2px);
 		height: 30px;
 		background: var(--white-color);
 		z-index: 2;
@@ -74,6 +74,9 @@
 		transition: transform 0.4s ease-in-out;
 		cursor: pointer;
 		margin-top: 6px;
+		box-sizing: border-box;
+		border-left: 1px solid var(--gray-color);
+		border-right: 1px solid var(--gray-color);
 		&:hover {
 			transform: translateY(0px);
 			margin-top: 0;
