@@ -1,1 +1,1 @@
-// import "./components/inert.js";
+import "./components/tabsFocus.js";
