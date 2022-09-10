@@ -1,1 +1,1 @@
-import "./vendor/focus-visible.js";
+import "wicg-inert";

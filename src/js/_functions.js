@@ -51,7 +51,9 @@
 
 // Подключение свайпера
 import Swiper, { Pagination, Autoplay, Navigation } from "swiper";
+
 Swiper.use([Pagination, Autoplay, Navigation]);
+
 const paginationElems = [
 	"Блог",
 	"ВКонтакте",
@@ -59,6 +61,9 @@ const paginationElems = [
 	"YouTube",
 	"Facebook",
 ];
+const swiperSlides = document.querySelectorAll(".swiper-slide");
+const defaultActiveSlide = 2;
+
 const swiper = new Swiper(".swiper", {
 	speed: 800,
 	spaceBetween: 10,
@@ -77,15 +82,27 @@ const swiper = new Swiper(".swiper", {
 		bulletActiveClass: "hero__bullet-active",
 		clickable: true,
 		renderBullet: function (index, className) {
-			return `<li class="${className}">${paginationElems[index]}</li>`;
+			return `<li class="${className}" tabindex="0">${paginationElems[index]}</li>`;
+		},
+	},
+	on: {
+		init: () => {
+			swiperSlides.forEach((slide) => {
+				slide.inert = true;
+			});
+			swiperSlides[defaultActiveSlide].inert = false;
+		},
+		slideChange: () => {
+			swiperSlides[swiper.activeIndex].inert = false;
+			swiperSlides[swiper.previousIndex].inert = true;
 		},
 	},
 });
-swiper.activeIndex = 2;
+swiper.activeIndex = defaultActiveSlide;
 
 const swiperInner = new Swiper(".swiper-inner", {
 	speed: 800,
-	spaceBetween: 18,
+	spaceBetween: 16,
 	slideClass: "swiper-inner__slide",
 	slideActiveClass: "swiper-inner__slide-active",
 	wrapperClass: "swiper-inner__wrapper",

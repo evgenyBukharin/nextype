@@ -1,1 +1,1 @@
-// import "./components/pagination.js";
+// import "./components/inert.js";
